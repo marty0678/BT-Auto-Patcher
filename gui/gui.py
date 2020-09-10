@@ -30,8 +30,7 @@ class MainWindow(QMainWindow):
     def browse_file(self, label, file_filter):
         """Opens a browse menu to select a file."""
               
-        # Opens browse menu with the dependencies folder pre-selected (unless start_folder is overloaded)
-        # Depending on save, open save or open
+        # Opens browse menu with the last used file path selected (if it exsits)
         file_name = QFileDialog.getOpenFileName(
             self, 
             "Browse", 
@@ -48,6 +47,7 @@ class MainWindow(QMainWindow):
     def pop_up(self, title, message):
         """Displays a message with the title and message."""
 
+        # Generate pop up with title, message, an info icon, and an OK button
         pop_up = QMessageBox(self)
         pop_up.setWindowTitle(title)
         pop_up.setText(message)
@@ -65,16 +65,19 @@ class MainWindow(QMainWindow):
             self.ui.btCalFile.text()
         ]
 
+        # Don't continue if not all files are selected
         if "No File Loaded" in validation:
             self.pop_up("Files Aren't Selected", "Not all input files were selected. Please browse for all three input files above and try again.")
             return
 
+        # Browse for output
         output_file = QFileDialog.getSaveFileName(
             self, 
             "Save File", 
             self.default_folder,
             "BlackTrax Calibration File (*.btcal)"
         )
+
         engine.generate_patch(
             self.ui.oldWYGFile.text(),
             self.ui.newWYGFile.text(),
@@ -82,6 +85,7 @@ class MainWindow(QMainWindow):
             output_file[0]
         )
 
+        # Great success!
         self.pop_up("Output Successful", """The file was updated successfully. 
         
 You may now import this into BlackTrax by going to File - Import - Fixture Calibration.""")

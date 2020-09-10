@@ -8,6 +8,7 @@ resource_path = "gui\\resources.qrc"
 resource_python = "gui\\resources_rc.py"
 subprocess.call(["pyside2-rcc", "-o", resource_python, resource_path], shell=True)
 
+# Update import for repo directory
 with open(ui_python, 'rt') as read_file:
     read = read_file.read()
     new = read.replace("resources_rc", "gui.resources_rc")
