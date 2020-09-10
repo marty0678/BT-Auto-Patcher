@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/BlackTraxIcon.png</file>
+  </qresource>
+</RCC>
