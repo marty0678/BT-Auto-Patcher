@@ -1,7 +1,7 @@
 import os, csv
 
 def open_patch(in_file):
-    """Returns a dict that contains Spot:Patch."""
+    """Returns a dict that contains Spot:WYG Patch."""
     with open(in_file, encoding='utf-16') as read_file:
         csv_reader = csv.DictReader(read_file)
         spot_map = {
