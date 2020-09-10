@@ -13,6 +13,6 @@ subprocess.call(
 "-F", 
 "-w",
 "--icon", icon,
-"-n", "BlackTrax Auto Patcher", 
+"-n", "BlackTrax AP", 
 "main.py"]
 )
