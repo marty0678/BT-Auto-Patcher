@@ -75,6 +75,10 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.oldWYGLabel = QLabel(self.centralwidget)
         self.oldWYGLabel.setObjectName(u"oldWYGLabel")
+        font = QFont()
+        font.setBold(True)
+        font.setWeight(75)
+        self.oldWYGLabel.setFont(font)
 
         self.gridLayout.addWidget(self.oldWYGLabel, 1, 0, 1, 1)
 
@@ -92,6 +96,7 @@ class Ui_MainWindow(object):
 
         self.newWYGLabel = QLabel(self.centralwidget)
         self.newWYGLabel.setObjectName(u"newWYGLabel")
+        self.newWYGLabel.setFont(font)
 
         self.gridLayout.addWidget(self.newWYGLabel, 2, 0, 1, 1)
 
@@ -109,6 +114,7 @@ class Ui_MainWindow(object):
 
         self.btCalLabel = QLabel(self.centralwidget)
         self.btCalLabel.setObjectName(u"btCalLabel")
+        self.btCalLabel.setFont(font)
 
         self.gridLayout.addWidget(self.btCalLabel, 3, 0, 1, 1)
 
@@ -143,11 +149,11 @@ class Ui_MainWindow(object):
 
         self.titleLabel = QLabel(self.centralwidget)
         self.titleLabel.setObjectName(u"titleLabel")
-        font = QFont()
-        font.setPointSize(12)
-        font.setBold(True)
-        font.setWeight(75)
-        self.titleLabel.setFont(font)
+        font1 = QFont()
+        font1.setPointSize(12)
+        font1.setBold(True)
+        font1.setWeight(75)
+        self.titleLabel.setFont(font1)
 
         self.headerLayout.addWidget(self.titleLabel)
 

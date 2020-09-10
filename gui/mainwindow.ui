@@ -77,6 +77,12 @@ QPushButton::pressed
    <layout class="QGridLayout" name="gridLayout">
     <item row="1" column="0">
      <widget class="QLabel" name="oldWYGLabel">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Old WYG CSV Export:</string>
       </property>
@@ -107,6 +113,12 @@ QPushButton::pressed
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="newWYGLabel">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>New WYG CSV Export:</string>
       </property>
@@ -137,6 +149,12 @@ QPushButton::pressed
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="btCalLabel">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Old BlackTrax Calibration:</string>
       </property>
