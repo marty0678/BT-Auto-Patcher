@@ -26,7 +26,7 @@ class MainWindow(QMainWindow):
 
         self.ui.generateButton.clicked.connect(self.generate_patch)
 
-    @Slot(str)
+    @Slot()
     def browse_file(self, label, file_filter):
         """Opens a browse menu to select a file."""
               
